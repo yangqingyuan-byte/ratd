@@ -1,0 +1,29 @@
+#type: args
+
+train:
+  epochs: 10
+  batch_size: 2
+  lr: 3.0e-4
+  itr_per_epoch: 1.0e+8
+
+diffusion:
+  layers: 4
+  channels: 64
+  nheads: 8
+  diffusion_embedding_dim: 128
+  beta_start: 0.0001
+  beta_end: 0.5
+  num_steps: 30
+  schedule: "quad"
+  is_linear: True
+  ref_size: 96
+  h_size: 168
+
+
+model:
+  is_unconditional: 0
+  timeemb: 128
+  featureemb: 32
+  target_strategy: "test"
+  num_sample_features: 64
+  use_reference: True

@@ -1,0 +1,24 @@
+#type: args
+
+
+path:
+  dataset_path: '../data/ts2vec'
+  encoder_path: './training/electricity__test1_20240421_163624/model.pt'
+  vec_path: '../data/TCN/ele_hisvec_list.pt'
+  ref_path: '../data/TCN/ele_idx_list.pt'
+  diffusion_embedding_dim: 128
+  beta_start: 0.0001
+  beta_end: 0.5
+  num_steps: 50
+  schedule: "quad"
+  is_linear: True
+
+retrieval:
+  device: 'cuda:0'
+  H: 168
+  L: 96
+  length: 1000
+  num_channels: 100
+  level: 2
+  num_sample_features: 64
+  use_reference: True

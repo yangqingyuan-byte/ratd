@@ -1,0 +1,382 @@
+# =============================================================================
+# Python .gitignore for RATD Project
+# Retrieval-Augmented Diffusion Models for Time Series Forecasting
+# =============================================================================
+
+# Python 虚拟环境
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+.Python
+
+# Python 缓存和编译文件
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+.installed.cfg
+MANIFEST
+
+# 分发和打包
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+
+# PyInstaller
+*.manifest
+*.spec
+
+# 测试和覆盖率
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+.ruff_cache/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv 和 Python 版本
+.python-version
+
+# pipenv
+Pipfile.lock
+
+# Poetry
+poetry.lock
+
+# PEP 582
+__pypackages__/
+
+# Celery
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath
+*.sage.py
+
+# 环境变量文件
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# =============================================================================
+# 机器学习和深度学习相关
+# =============================================================================
+
+# 模型文件
+*.pth
+*.pt
+*.ckpt
+*.h5
+*.hdf5
+*.pb
+*.onnx
+*.tflite
+*.mlmodel
+*.pkl
+*.pickle
+*.joblib
+
+# TensorBoard 日志
+runs/
+logs/
+tensorboard/
+lightning_logs/
+
+# Weights & Biases
+wandb/
+
+# MLflow
+mlruns/
+mlartifacts/
+
+# 数据文件（根据需要调整）
+*.csv
+*.tsv
+*.json
+*.jsonl
+*.parquet
+*.feather
+*.npy
+*.npz
+*.mat
+*.dat
+
+# 大数据目录
+data/raw/
+data/processed/
+data/external/
+datasets/
+
+# 模型检查点和保存目录
+checkpoints/
+models/
+saved_models/
+artifacts/
+experiments/
+outputs/
+
+# =============================================================================
+# IDE 和编辑器
+# =============================================================================
+
+# Visual Studio Code
+.vscode/
+.history/
+
+# PyCharm
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# Spyder
+.spyderproject
+.spyproject
+
+# Rope
+.ropeproject
+
+# =============================================================================
+# 操作系统文件
+# =============================================================================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# Linux
+*~
+
+# =============================================================================
+# 日志和临时文件
+# =============================================================================
+
+# 日志文件
+*.log
+*.log.*
+logs/
+log/
+
+# 临时文件
+*.tmp
+*.temp
+temp/
+tmp/
+.cache/
+
+# 备份文件
+*.bak
+*.backup
+*.old
+*.orig
+
+# =============================================================================
+# 数据库
+# =============================================================================
+
+*.db
+*.sqlite
+*.sqlite3
+*.db-journal
+
+# =============================================================================
+# 压缩文件（通常不需要版本控制）
+# =============================================================================
+
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# =============================================================================
+# 配置和密钥文件
+# =============================================================================
+
+# 配置文件（可能包含敏感信息）
+config/local.py
+config/secret.py
+secrets.yaml
+credentials.json
+*.key
+*.pem
+
+# =============================================================================
+# 项目特定文件
+# =============================================================================
+
+# RATD 项目特定的忽略文件
+save/*/
+results/
+plots/
+figures/
+cache/
+
+# 如果有大型预训练模型
+pretrained/
+weights/
+
+# 实验配置的临时文件
+experiment_*.yaml
+temp_config.json
+
+# =============================================================================
+# 其他
+# =============================================================================
+
+# 编译的消息文件
+*.mo
+*.pot
+
+# Django
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Flask
+instance/
+.webassets-cache
+
+# Scrapy
+.scrapy
+
+# Sphinx 文档
+docs/_build/
+
+# PyBuilder
+target/
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# pytype static type analyzer
+.pytype/
+
+# Cython debug symbols
+cython_debug/
+
+# =============================================================================
+# 自定义规则（根据项目需要添加）
+# =============================================================================
+
+# 如果有特定的输出目录
+output/
+results/
+
+# 大文件示例（取消注释如果需要）
+# *.bin
+# *.weights
+# large_data/
+
+# =============================================================================
+# RATD 项目特定忽略规则 (更新)
+# =============================================================================
+
+# 模型保存目录 - 完全忽略
+save/
+
+# 其他输出目录
+output/
+results/
+checkpoints/
+logs/
+runs/
+
+# 实验和训练相关
+experiments/
+training_logs/
+*.log
+*.out
+
+# =============================================================================
+# 其他特定文件
+# =============================================================================
+
+# 特定文件
+*.log
+*.out
+
+# 特定目录
+data/
