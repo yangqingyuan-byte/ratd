@@ -1,0 +1,29 @@
+#type: args
+
+train:
+  epochs: 10
+  batch_size: 1  # 从2减少到1
+  lr: 3.0e-4
+  itr_per_epoch: 1.0e+8
+
+diffusion:
+  layers: 2  # 从4减少到2
+  channels: 32  # 从64减少到32
+  nheads: 4  # 从8减少到4
+  diffusion_embedding_dim: 64  # 从128减少到64
+  beta_start: 0.0001
+  beta_end: 0.5
+  num_steps: 20  # 从30减少到20
+  schedule: "quad"
+  is_linear: True
+  ref_size: 96
+  h_size: 168
+
+
+model:
+  is_unconditional: 0
+  timeemb: 64  # 从128减少到64
+  featureemb: 16  # 从32减少到16
+  target_strategy: "test"
+  num_sample_features: 32  # 从64减少到32
+  use_reference: True 
