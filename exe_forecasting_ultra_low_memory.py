@@ -15,15 +15,18 @@ os.environ['PYTORCH_CUDA_ALLOC_CONF'] = 'expandable_segments:True'
 torch.backends.cudnn.benchmark = False
 torch.backends.cudnn.deterministic = True
 
+# 强制使用较少的GPU内存
+torch.cuda.set_per_process_memory_fraction(0.8)  # 限制GPU内存使用为80%
+
 parser = argparse.ArgumentParser(description="RATD")
-parser.add_argument("--config", type=str, default="low_memory_forecasting.yaml")
+parser.add_argument("--config", type=str, default="ultra_low_memory_forecasting.yaml")
 parser.add_argument("--datatype", type=str, default="electricity")
 parser.add_argument('--device', default='cuda:0', help='Device for Attack')
 parser.add_argument("--seed", type=int, default=1)
 parser.add_argument("--unconditional", action="store_true")
 parser.add_argument("--modelfolder", type=str, default="")
-parser.add_argument("--nsample", type=int, default=50)  # 从100减少到50
-parser.add_argument("--target_dim", type=int, default=161)  # 从321减少到161
+parser.add_argument("--nsample", type=int, default=25)  # 进一步减少到25
+parser.add_argument("--target_dim", type=int, default=80)  # 进一步减少到80
 parser.add_argument("--h_size", type=int, default=168)
 parser.add_argument("--ref_size", type=int, default=96)
 
